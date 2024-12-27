@@ -17,6 +17,13 @@ Example <- R6::R6Class(
         #' @return A new `Example` object.
         initialize = function(vec_size) {
             self$example_ptr <- create_example_class_cpp(vec_size)
+        },
+
+        #' @description
+        #' Code to run when Example object is removed
+        finalize = function() {
+            print("Running the R object finalizer")
+            delete_example_class_cpp(self$example_ptr)
         }
     )
 )

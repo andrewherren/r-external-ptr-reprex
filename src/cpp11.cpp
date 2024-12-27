@@ -12,10 +12,19 @@ extern "C" SEXP _cpp11example_create_example_class_cpp(SEXP vec_size) {
     return cpp11::as_sexp(create_example_class_cpp(cpp11::as_cpp<cpp11::decay_t<int>>(vec_size)));
   END_CPP11
 }
+// example.cpp
+void delete_example_class_cpp(cpp11::external_pointer<ExampleClass> example_ptr);
+extern "C" SEXP _cpp11example_delete_example_class_cpp(SEXP example_ptr) {
+  BEGIN_CPP11
+    delete_example_class_cpp(cpp11::as_cpp<cpp11::decay_t<cpp11::external_pointer<ExampleClass>>>(example_ptr));
+    return R_NilValue;
+  END_CPP11
+}
 
 extern "C" {
 static const R_CallMethodDef CallEntries[] = {
     {"_cpp11example_create_example_class_cpp", (DL_FUNC) &_cpp11example_create_example_class_cpp, 1},
+    {"_cpp11example_delete_example_class_cpp", (DL_FUNC) &_cpp11example_delete_example_class_cpp, 1},
     {NULL, NULL, 0}
 };
 }

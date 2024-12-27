@@ -3,3 +3,7 @@
 create_example_class_cpp <- function(vec_size) {
   .Call(`_cpp11example_create_example_class_cpp`, vec_size)
 }
+
+delete_example_class_cpp <- function(example_ptr) {
+  invisible(.Call(`_cpp11example_delete_example_class_cpp`, example_ptr))
+}

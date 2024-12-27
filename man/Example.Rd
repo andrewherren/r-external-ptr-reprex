@@ -17,6 +17,7 @@ R object wrapping an external pointer to a C++ class
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-Example-new}{\code{Example$new()}}
+\item \href{#method-Example-finalize}{\code{Example$finalize()}}
 }
 }
 \if{html}{\out{<hr>}}
@@ -38,5 +39,15 @@ Create a new Example object.
 \subsection{Returns}{
 A new \code{Example} object.
 }
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Example-finalize"></a>}}
+\if{latex}{\out{\hypertarget{method-Example-finalize}{}}}
+\subsection{Method \code{finalize()}}{
+Code to run when Example object is removed
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Example$finalize()}\if{html}{\out{</div>}}
+}
+
 }
 }

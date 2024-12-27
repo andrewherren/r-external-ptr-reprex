@@ -10,3 +10,8 @@ cpp11::external_pointer<ExampleClass> create_example_class_cpp(int vec_size) {
     // Release management of the pointer to R session
     return cpp11::external_pointer<ExampleClass>(example_ptr_.release());
 }
+
+[[cpp11::register]]
+void delete_example_class_cpp(cpp11::external_pointer<ExampleClass> example_ptr) {
+    example_ptr.release();
+}
