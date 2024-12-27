@@ -1,3 +1,10 @@
 library(cpp11example)
 
-my_example <- createExample(10000)
+# Create an initial Example class
+my_example <- createExample(100)
+
+# Check whether C++ destructors are run when class is overwritten
+my_example <- createExample(100)
+
+# Check whether C++ destructors are run when class is removed
+rm(my_example)

@@ -30,7 +30,9 @@ public:
         g_ = normal_dist(rd);
         h_ = poisson_dist(rd);
     }
-    ~DataObject() {}
+    ~DataObject() {
+        std::cout << "Running DataObject destructor" << std::endl;
+    }
 private:
     double a_;
     double b_;
@@ -51,7 +53,9 @@ public:
         }
         vec_size_ = vec_size;
     }
-    ~ExampleClass() {}
+    ~ExampleClass() {
+        std::cout << "Running ExampleClass destructor" << std::endl;
+    }
 private:
     std::vector<std::unique_ptr<DataObject>> data_;
     int vec_size_;
