@@ -30,9 +30,7 @@ public:
         g_ = normal_dist(rd);
         h_ = poisson_dist(rd);
     }
-    ~DataObject() {
-        std::cout << "Running DataObject destructor" << std::endl;
-    }
+    ~DataObject() {}
 private:
     double a_;
     double b_;
