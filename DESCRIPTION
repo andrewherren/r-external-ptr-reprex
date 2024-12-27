@@ -1,0 +1,12 @@
+Package: cpp11example
+Title: Minimal example exploring memory management of external (C++) objects via R's cpp11 interface.
+Version: 0.0.0.9000
+Authors@R: 
+    person("Drew", "Herren", , "drewherrenopensource@gmail.com", role = c("aut", "cre"))
+Description: Minimal example exploring memory management of external (C++) objects via R's cpp11 interface.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+LinkingTo: 
+    cpp11
