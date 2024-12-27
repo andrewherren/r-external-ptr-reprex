@@ -13,5 +13,6 @@ cpp11::external_pointer<ExampleClass> create_example_class_cpp(int vec_size) {
 
 [[cpp11::register]]
 void delete_example_class_cpp(cpp11::external_pointer<ExampleClass> example_ptr) {
-    example_ptr.release();
+    ExampleClass* released_ptr = example_ptr.release();
+    delete released_ptr;
 }
